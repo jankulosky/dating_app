@@ -13,7 +13,6 @@ namespace API.SignalR
             _tracker = tracker;
         }
 
-        [Authorize]
         public override async Task OnConnectedAsync()
         {
             var isOnline = await _tracker.UserConnected(Context.User.GetUsername(), Context.ConnectionId);

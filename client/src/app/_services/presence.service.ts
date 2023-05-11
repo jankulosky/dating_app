@@ -38,11 +38,8 @@ export class PresenceService {
 
     this.hubConnection.on('UserIsOffline', (username) => {
       this.onlineUsers$.pipe(take(1)).subscribe({
-        next: (usernames) => {
-          this.onlineUsersSource.next([
-            ...usernames.filter((x) => x !== username),
-          ]);
-        },
+        next: (usernames) =>
+          this.onlineUsersSource.next(usernames.filter((x) => x !== username)),
       });
     });
 
@@ -62,7 +59,7 @@ export class PresenceService {
     });
   }
 
-  stopHubConnetion() {
+  stopHubConnection() {
     this.hubConnection?.stop().catch((error) => console.log(error));
   }
 }

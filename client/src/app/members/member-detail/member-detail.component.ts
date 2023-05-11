@@ -29,7 +29,7 @@ export class MemberDetailComponent implements OnInit, OnDestroy {
   user?: User;
 
   constructor(
-    public presence: PresenceService,
+    public presenceService: PresenceService,
     private route: ActivatedRoute,
     private messageService: MessageService,
     private accountService: AccountService,
