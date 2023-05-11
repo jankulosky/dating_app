@@ -21,3 +21,18 @@ input[type="file"] {
 .center {
   margin-left: 6px;
 }
+
+.not-approved {
+  opacity: 0.2;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-text {
+  position: absolute;
+  margin-left: 1rem;
+  width: 50%;
+  bottom: 50%;
+}
